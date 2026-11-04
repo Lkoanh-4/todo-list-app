@@ -52,3 +52,12 @@ if __name__ == "__main__":
     complete_task(0)
 
     list_tasks()
+
+# Hàm xóa một công việc
+def delete_task(task_index):
+    """Xóa một công việc khỏi danh sách."""
+    if task_index >= 0 and task_index < len(tasks):
+        deleted_task = tasks.pop(task_index)
+        print(f"Đã xóa công việc: {deleted_task['name']}")
+    else:
+        print("Chỉ số công việc không hợp lệ!")
